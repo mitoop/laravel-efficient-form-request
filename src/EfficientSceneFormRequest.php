@@ -13,6 +13,6 @@ class EfficientSceneFormRequest extends EfficientFormRequest
         $scene = $method.'Rules';
         $rules = method_exists($this, $scene) ? $this->container->call([$this, $scene]) : [];
 
-        return static::$globalBail ? $this->applyBailToRules($rules) : $rules;
+        return static::$applyGlobalBail ? $this->applyBailToRules($rules) : $rules;
     }
 }
