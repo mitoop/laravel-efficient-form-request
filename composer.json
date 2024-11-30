@@ -1,0 +1,22 @@
+{
+    "name": "mitoop/laravel-efficient-form-request",
+    "type": "library",
+    "require": {
+        "laravel/framework": "^10.43.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mitoop\\LaravelEfficientFormRequest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mitoop",
+            "email": "me@mitoop.com"
+        }
+    ]
+}
