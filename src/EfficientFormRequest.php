@@ -8,18 +8,18 @@ class EfficientFormRequest extends FormRequest
 {
     protected $stopOnFirstFailure = true;
 
-    protected static $applyGlobalBail = false;
+    protected static bool $applyGlobalBail = false;
 
     protected function validationRules(): array
     {
         $rules = parent::validationRules();
 
-        return static::$applyGlobalBail ? $this->applyBailToRules($rules) : $rules;
+        return self::$applyGlobalBail ? $this->applyBailToRules($rules) : $rules;
     }
 
     public static function applyGlobalBail(bool $value): void
     {
-        static::$applyGlobalBail = $value;
+        self::$applyGlobalBail = $value;
     }
 
     protected function applyBailToRules(array $rules): array
